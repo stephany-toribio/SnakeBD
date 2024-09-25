@@ -33,7 +33,7 @@ class Intro():
     def __init__(self):
         self.screen = pg.display.get_surface()
         self.alpha = -5
-        self.imgLogo = pg.image.load("Snake-XPR_UCAB-main/images/logo.png")
+        self.imgLogo = pg.image.load("Snake/images/logo.png")
         
     def bucle(self, events:list):
         global page
@@ -59,7 +59,7 @@ class Start():
         self.multi = False
         sound = pgm.sound.Sound()
         sound.load_example_sounds()
-        self.imgWin = pg.image.load("Snake-XPR_UCAB-main/images/win.png")
+        self.imgWin = pg.image.load("Snake/images/win.png")
 
         mytheme = pgm.Theme()
         mytheme.title_bar_style = pgm.widgets.MENUBAR_STYLE_SIMPLE
@@ -312,10 +312,10 @@ sound = True
 if pg.mixer.get_init() is None:
     sound = False
 else:
-    soundMultiSnake = pg.mixer.Sound('Snake-XPR_UCAB-main/sounds/snakeMulti.mp3')
-    soundRecord = pg.mixer.Sound('Snake-XPR_UCAB-main/sounds/record.mp3')
-    soundPoint = pg.mixer.Sound('Snake-XPR_UCAB-main/sounds/point.mp3')
-    soundGameOver = pg.mixer.Sound('Snake-XPR_UCAB-main/sounds/gameOver.mp3')
+    soundMultiSnake = pg.mixer.Sound('Snake/sounds/snakeMulti.mp3')
+    soundRecord = pg.mixer.Sound('Snake/sounds/record.mp3')
+    soundPoint = pg.mixer.Sound('Snake/sounds/point.mp3')
+    soundGameOver = pg.mixer.Sound('Snake/sounds/gameOver.mp3')
 
 intro, start, game = Intro(), Start(), Game()
 pages = [intro, start, game]
